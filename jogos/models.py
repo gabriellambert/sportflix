@@ -13,3 +13,6 @@ class Jogo(models.Model):
     ano = models.CharField(max_length=4)
     modalidade = models.CharField(choices=MODALIDADE_CHOICES, max_length=3)
     imagem = models.ImageField(upload_to='fotos/%d/%m/%Y', blank=True)
+
+    def __str__(self):
+        return self.jogador_01 + ' x ' + self.jogador_02
