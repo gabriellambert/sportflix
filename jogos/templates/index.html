@@ -15,95 +15,58 @@
 </section>
 
 <main>
-    <div class="container-fluid bg-light mb-5">
-        <h2 class="text-left">Futebol</h2>
+    <div class="container-fluid mb-5 pb-3">
+        <h2 class="text-left pt-3">Futebol</h2>
+        {% if jogos_futebol %}
         <div class="row">
+            {% for jogo in jogos_futebol %}
             <a class="col-md-3 col-sm--6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
+                <img src="{{ jogo.imagem.url }}" alt="" class="image" >
                 <div class="middle">
-                    <div class="text">John Doe</div>
-                    <div class="text">John Doe</div>
+                    <div class="text">{{ jogo.jogador_01 }} x {{ jogo.jogador_02 }}</div>
                 </div>
             </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
+        {% else %}
+        <p>Não há jogos de futebol cadastrados</p>
+        {% endif %}
     </div>
 
-    <div class="container-fluid bg-light mb-5">
-        <h2 class="text-left">Basquete</h2>
+    <div class="container-fluid mb-5 pb-3">
+        <h2 class="text-left pt-3">Basquete</h2>
+        {% if jogos_basquete %}
         <div class="row">
+            {% for jogo in jogos_basquete %}
             <a class="col-md-3 col-sm--6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
+                <img src="{{ jogo.imagem.url }}" alt="" class="image">
                 <div class="middle">
-                    <div class="text">John Doe</div>
+                    <div class="text">{{ jogo.jogador_01 }} x {{ jogo.jogador_02 }}</div>
                 </div>
             </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
+        {% else %}
+        <p>Não há jogos de basquete cadastrados</p>
+        {% endif %}
     </div>
 
-    <div class="container-fluid bg-light mb-5">
-        <h2 class="text-left">Tenis</h2>
+    <div class="container-fluid mb-5 pb-3">
+        <h2 class="text-left pt-3">Tenis</h2>
+        {% if jogos_tenis %}
         <div class="row">
+            {% for jogo in jogos_tenis %}
             <a class="col-md-3 col-sm--6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
+                <img src="{{ jogo.imagem.url }}" alt="" class="image">
                 <div class="middle">
-                    <div class="text">John Doe</div>
+                    <div class="text">{{ jogo.jogador_01 }} x {{ jogo.jogador_02 }}</div>
                 </div>
             </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
-            <a class="col-md-3 col-sm-6 container-card" href="#">
-                <img src="static/img/football01.jpg" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text">John Doe</div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
+        {% else %}
+        <p>Não há jogos de tenis cadastrados</p>
+        {% endif %}
     </div>
 
 </main>
